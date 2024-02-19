@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akala Signature</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .backdrop-blur {
+        backdrop-filter: blur(6px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav
+        id="nav"
+        class="flex z-50 h-20 w-full items-center justify-between font-redhat fixed"
+      >
+        <div class="flex gap-2 px-5 items-center">
+          <img
+            src="./assets/img/lattepic.png"
+            alt=""
+            class="w-12 h-12 rounded-full"
+          />
+          <span class="w-[3px] h-[50px] bg-white rounded-full">
+            <span></span>
+          </span>
+          <div class="font-bold text-white">
+            <div class="flex items-center text-[1.3rem]">
+              <h1 class="text-red-300">AK</h1>
+              <h1 class="mr-2">ALA</h1>
+              <h1 class="text-red-300">SIGNA</h1>
+              <h1>TURE</h1>
+            </div>
+            <div class="whitespace-nowrap text-[0.9rem]">
+              <p>Lombok Rembiga Restaurant</p>
+            </div>
+          </div>
+        </div>
+        <ul class="md:flex gap-4 text-white font-semibold pr-5 hidden">
+          <li>
+            <a
+              class="hover:text-red-200 lg:text-[1rem] md:text-[0.8rem]"
+              href=""
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-red-200 lg:text-[1rem] md:text-[0.8rem]"
+              href=""
+              >MENU</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-red-200 lg:text-[1rem] md:text-[0.8rem]"
+              href=""
+              >ABOUT US</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-red-200 lg:text-[1rem] md:text-[0.8rem]"
+              href=""
+              >CONTACT US</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-red-200 lg:text-[1rem] md:text-[0.8rem]"
+              href=""
+              >LOCATION</a
+            >
+          </li>
+        </ul>
+        <div class="md:hidden w-8 h-7 flex-col justify-between mr-5 flex">
+          <div
+            id="hamburgerBtn"
+            class="w-8 h-7 absolute opacity-0 cursor-pointer"
+          ></div>
+          <div class="w-full h-[5px] rounded-full bg-white"></div>
+          <div class="w-full h-[5px] rounded-full bg-white"></div>
+          <div class="w-full h-[5px] rounded-full bg-white"></div>
+        </div>
+      </nav>
+      <div
+        id="nav-dropdown"
+        class="md:hidden h-[290px] w-full flex items-center absolute top-[-55%] transition-all duration-300 backdrop-blur"
+      >
+        <ul
+          class="font-redhat h-[300px] font-semibold text-white flex flex-col justify-center gap-6 pl-32"
+        >
+          <li><a href="">HOME</a></li>
+          <li><a href="">MENU</a></li>
+          <li><a href="">ABOUT US</a></li>
+          <li><a href="">CONTACT US</a></li>
+          <li><a href="">LOCATION</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="hero" class="w-full h-screen lg:h-[100vh] font-redhat">
+      <img
+        src="./assets/img/hero-img2.jpg"
+        alt=""
+        class="w-screen h-2/3 object-cover"
+        style="object-position: 100% 53%"
+      />
+      <h1 class="text-center py-10 font-bold text-[2rem]">AKALA SIGNATURE</h1>
+      <p class="text-center px-14 font-semibold text-[1.2rem]">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia qui
+        sapiente vel! Voluptas quia, iusto sint, aliquid reiciendis facere nemo
+        excepturi ea harum consequatur sit omnis asperiores ipsum praesentium
+        magnam.
+      </p>
+    </section>
+
+    <script>
+      hamburgerBtn = document.getElementById("hamburgerBtn");
+      dropdown = document.getElementById("nav-dropdown");
+      navbar = document.getElementById("nav");
+
+      hamburgerBtn.addEventListener("click", function () {
+        dropdown.classList.toggle("top-[-55%]");
+        dropdown.classList.toggle("top-20");
+        // navbar.classList.toggle("backdrop-blur");
+      });
+    </script>
+  </body>
+</html>
