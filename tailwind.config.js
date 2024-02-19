@@ -7,6 +7,9 @@ export default {
         redhat: ["Red Hat Text", "sans-serif"],
         kodemono: ["Kode Mono", "monospace"],
       },
+      animation: {
+        slideIn: "slideIn 1s ease-in-out forwards",
+      },
     },
   },
   plugins: [],
